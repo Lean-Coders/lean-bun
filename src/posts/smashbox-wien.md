@@ -12,11 +12,11 @@ testers:
   - name: Julian
     review:
       ingredientScore: 2
+      ambienteScore: 2
       timingScore: 2
       pattyScore: 2
       valueForMoneyScore: 2
-      varietyScore: 0
-      ambienteScore: 2
+      varietyScore: 3.5
       burger: El Chicano
       drinksScore: 1
       bunScore: 2.5
