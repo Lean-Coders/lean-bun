@@ -1,12 +1,18 @@
 ---
 title: This is my third post
-description: Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-date: 2020-09-03
+restaurant: Weinschenke
+description: Iterative approaches to corporate strategy foster collaborative
+  thinking to further the overall value proposition. Organically grow the
+  holistic world view of disruptive innovation via workplace diversity and
+  empowerment.
 author: Surjith S M
+date: 2020-09-03
 tags:
   - second-tag
+  - test-tag
+testers:
+  - Julian
 ---
-
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
 Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
@@ -23,7 +29,7 @@ Bring to the table win-win survival strategies to ensure proactive domination. A
 
 ## Horizontal Rules
 
----
+- - -
 
 ## Emphasis
 
@@ -31,9 +37,9 @@ Bring to the table win-win survival strategies to ensure proactive domination. A
 
 **This is bold text**
 
-_This is italic text_
+*This is italic text*
 
-_This is italic text_
+*This is italic text*
 
 ~~Strikethrough~~
 
@@ -49,27 +55,28 @@ _This is italic text_
 
 Unordered
 
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
+* Create a list by starting a line with `+`, `-`, or `*`
+* Sub-lists are made by indenting 2 spaces:
+
+  * Marker character change forces new list start:
+
+    * Ac tristique libero volutpat at
     * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
+    * Nulla volutpat aliquam velit
+* Very easy!
 
 Ordered
 
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
-
 4. You can use sequential numbers...
 5. ...or keep all the numbers as `1.`
 
 Start numbering with offset:
 
 57. foo
-1. bar
+58. bar
 
 ## Code
 
@@ -77,10 +84,12 @@ Inline `code`
 
 Indented code
 
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
+```
+// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+```
 
 Block code "fences"
 
