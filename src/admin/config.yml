@@ -99,6 +99,14 @@ collections:
                 default: 0
                 max: 5
                 step: 0.5
+              - label: Variety
+                name: varietyScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+                step: 0.5
               - label: Ingredients
                 name: ingredientScore
                 widget: number
