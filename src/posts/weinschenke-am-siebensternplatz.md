@@ -6,7 +6,7 @@ description: Ducimus provident labore alias. Hic dolorum officiis et. Amet nulla
   Ab architecto corporis qui laboriosam sequi enim.
 author: Julian Pufler
 date: 2022-09-08T16:00:48.942Z
-score: 1
+score: 2
 testers:
   - name: Julian
     review:
