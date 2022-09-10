@@ -15,6 +15,7 @@ testers:
       timingScore: 2
       pattyScore: 2
       valueForMoneyScore: 2
+      varietyScore: 2
       ambiente: 2
       burger: El Chicano
       drinksScore: 1
@@ -27,6 +28,7 @@ testers:
       timingScore: 3
       pattyScore: 2
       valueForMoneyScore: 3
+      varietyScore: 2
       ambiente: 2
       burger: Der Burger
       drinksScore: 2
