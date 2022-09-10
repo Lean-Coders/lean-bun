@@ -2,9 +2,9 @@ backend:
   # Use netlify identity as backend
   name: git-gateway
   branch: master
-  ### enable below lines for github integration ###
-  # name: github
-  # repo: surjithctly/neat-starter
+  ### enable below lines for github floategration ###
+name: github
+repo: surjithctly/neat-starter
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
@@ -12,18 +12,115 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: Blog
+    name: blog
+    folder: src/posts
     create: true
     editor:
       preview: false
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: string }
-      - { label: Author, name: author, widget: string }
-      - { label: Date, name: date, widget: datetime }
-      - { label: Text, name: body, widget: markdown }
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+      - label: Author
+        name: author
+        widget: string
+      - label: Date
+        name: date
+        widget: datetime
+      - label: Score
+        name: score
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+      - label: Testers
+        name: testers
+        widget: list
+        collapsed: true
+        summary: "{{fields.name}} - {{fields.score}}"
+        fields:
+          - label: Name
+            name: name
+            widget: string
+          - label: Score
+            name: score
+            widget: number
+            value_type: float
+            min: 0
+            default: 0
+            max: 5
+          - label: Review
+            name: review
+            widget: object
+            collapsed: true
+            fields:
+              - label: Burger
+                name: burger
+                widget: string
+              - label: Bun
+                name: bunScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Patty
+                name: pattyScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Timing
+                name: timingScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Drinks
+                name: drinksScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Ingredients
+                name: ingredientScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Value for Money
+                name: valueForMoneyScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Service
+                name: serviceScore
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+              - label: Ambiente
+                name: ambiente
+                widget: number
+                value_type: float
+                min: 0
+                default: 0
+                max: 5
+      - label: Text
+        name: body
+        widget: markdown
       - label: Tags
         name: tags
         widget: create-select
@@ -31,21 +128,14 @@ collections:
         mode: plain
         capture: ^\b$
         multiple: true
-      - label: Testers
-        name: testers
-        widget: create-select
-        url: ""
-        mode: plain
-        capture: ^\b$
-        multiple: true
-  - label: "Settings"
-    name: "settings"
+  - label: Settings
+    name: settings
     editor:
       preview: false
     files:
-      - label: "Navigation"
-        name: "items"
-        file: "src/_data/navigation.json"
+      - label: Navigation
+        name: items
+        file: src/_data/navigation.json
         fields:
           - label: Nav Items
             name: items
@@ -53,24 +143,22 @@ collections:
             allow_add: false
             collapsed: false
             fields:
-              - { label: Title, name: text, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Relative link, name: isRelative, widget: boolean }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.json"
+              - label: Title
+                name: text
+                widget: string
+              - label: URL
+                name: url
+                widget: string
+              - label: Relative link
+                name: isRelative
+                widget: boolean
+      - label: Meta Settings
+        name: settings
+        file: src/_data/settings.json
         fields:
-          - label: Nav Items
-            name: links
-            widget: list
-            collapsed: false
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
-      - label: "Meta Settings"
-        name: "settings"
-        file: "src/_data/settings.json"
-        fields:
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
+          - label: Copyright
+            name: copyright
+            widget: string
+          - label: URL
+            name: url
+            widget: string
