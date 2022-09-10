@@ -7,7 +7,6 @@ description: Ducimus provident labore alias. Hic dolorum officiis et. Amet nulla
 address: Siebensterngasse 31/III, 1070 Wien
 author: Julian Pufler
 date: 2022-09-08T16:00:48.942Z
-score: 1
 testers:
   - name: Julian
     review:
@@ -21,9 +20,7 @@ testers:
       drinksScore: 1
       bunScore: 2.5
       serviceScore: 1.5
-    score: 2
-  - score: 2.5
-    review:
+  - review:
       ingredientScore: 1
       timingScore: 3
       pattyScore: 2

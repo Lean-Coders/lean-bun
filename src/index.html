@@ -7,6 +7,7 @@ path: home
   class="mx-auto mt-15 max-w-4xl flex flex-col gap-8 justify-center items-center"
 >
   {% set postslist = collections.post %} {% for post in postslist | reverse %}
+  {% set score = post.data.testers | totalScore %}
   <article class="p-6 md:p-8 shadow-md rounded-md bg-white">
     <a href="{{ post.url | url }}">
       <h2 class="font-bold text-3xl text-secondary mb-3">
@@ -18,7 +19,7 @@ path: home
       >
         <div
           class="h-[28px] w-[140px] rating relative text-primary"
-          style="--rating:{{ 6 - post.data.score }}; --size: 28px"
+          style="--rating:{{ 6 - score }}; --size: 28px"
         ></div>
         <p class="text-base leading-6 text-gray-500">
           <time>{{ post.date | readableDate }}</time>

@@ -3,6 +3,7 @@ layout: default
 prism: true
 ---
 
+{% set score = testers | totalScore %}
 <div class="py-8">
   <h1 class="font-bold tracking-wide text-3xl md:text-4xl">{{title}}</h1>
   <div
@@ -17,7 +18,7 @@ prism: true
     {{ address }}
   </p>
   <ul class="grid mx-auto prose lg:prose-xl">
-    {% for tester in testers %}
+    {% for tester in testers %} {% set score = tester | testerScore %}
     <li
       x-data="{ isOpen: false }"
       @keydown.escape="isOpen = false"
@@ -28,7 +29,7 @@ prism: true
         <div class="flex justify-end">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
-            style="--rating:{{ 6 - tester.score }}; --size: 24px"
+            style="--rating:{{ 6 - score }}; --size: 24px"
           ></div>
         </div>
         <p

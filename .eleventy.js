@@ -16,6 +16,52 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("totalScore", (testers) => {
+    return (
+      Math.round(
+        (testers.reduce(
+          (sum, { review }) =>
+            sum +
+            [
+              review.bunScore,
+              review.pattyScore,
+              review.timingScore,
+              review.drinksScore,
+              review.varietyScore,
+              review.ingredientScore,
+              review.valueForMoneyScore,
+              review.serviceScore,
+              review.ambienteScore,
+            ].reduce((acc, curr) => acc + curr, 0) /
+              9,
+          0
+        ) /
+          testers.length) *
+          2
+      ) / 2
+    );
+  });
+
+  eleventyConfig.addFilter("testerScore", ({ review }) => {
+    return (
+      Math.round(
+        ([
+          review.bunScore,
+          review.pattyScore,
+          review.timingScore,
+          review.drinksScore,
+          review.varietyScore,
+          review.ingredientScore,
+          review.valueForMoneyScore,
+          review.serviceScore,
+          review.ambienteScore,
+        ].reduce((acc, curr) => acc + curr, 0) /
+          9) *
+          2
+      ) / 2
+    );
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 

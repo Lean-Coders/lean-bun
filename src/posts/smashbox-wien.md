@@ -7,7 +7,6 @@ description: Ducimus provident labore alias. Hic dolorum officiis et. Amet nulla
 address: Margaretenstraße 11, 1040 Wien
 author: Julian Pufler
 date: 2022-09-14T14:30:16.276Z
-score: 2.5
 testers:
   - name: Julian
     review:
@@ -15,13 +14,12 @@ testers:
       timingScore: 2
       pattyScore: 2
       valueForMoneyScore: 2
-      varietyScore: 0
+      varietyScore: 1
       ambienteScore: 2
       burger: El Chicano
       drinksScore: 1
       bunScore: 2.5
       serviceScore: 1.5
-    score: 2
 tags:
   - 8. Bezirk
 ---
