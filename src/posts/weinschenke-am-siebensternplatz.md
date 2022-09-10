@@ -2,7 +2,7 @@
 title: Weinschenke am Siebensternplatz
 description: Test
 author: Julian Pufler
-date: 2022-09-10T09:50:48.942Z
+date: 2022-09-08T16:00:48.942Z
 score: 1.5
 testers:
   - name: Julian
