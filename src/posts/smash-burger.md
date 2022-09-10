@@ -1,9 +1,10 @@
 ---
-title: Smash Burger
+title: SMASHBOX WIEN
 description: Ducimus provident labore alias. Hic dolorum officiis et. Amet nulla
   corporis amet omnis quas est et. Tempora incidunt sed asperiores aperiam
   voluptatem tempora. Ad amet recusandae ea ex doloremque officia ducimus alias.
   Ab architecto corporis qui laboriosam sequi enim.
+address: Margaretenstraße 11, 1040 Wien
 author: Julian Pufler
 date: 2022-09-14T14:30:16.276Z
 score: 2.5
@@ -14,6 +15,7 @@ testers:
       timingScore: 2
       pattyScore: 2
       valueForMoneyScore: 2
+      varietyScore: 0
       ambiente: 2
       burger: El Chicano
       drinksScore: 1
