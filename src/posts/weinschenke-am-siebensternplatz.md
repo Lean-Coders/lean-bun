@@ -21,6 +21,18 @@ testers:
       bunScore: 2.5
       serviceScore: 1.5
     score: 2
+  - score: 2.5
+    review:
+      ingredientScore: 1
+      timingScore: 3
+      pattyScore: 2
+      valueForMoneyScore: 3
+      ambiente: 2
+      burger: Der Burger
+      drinksScore: 2
+      bunScore: 2
+      serviceScore: 2
+    name: Elias
 tags:
   - 7. Bezirk
 ---
