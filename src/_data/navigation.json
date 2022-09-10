@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "text": "Contact",
+      "url": "mailto:hello@lean-coders.at",
+      "isRelative": true
+    },
+    {
+      "text": "Website",
+      "url": "https://lean-coders.at",
+      "isRelative": false
+    },
+    {
+      "text": "Instagram",
+      "url": "https://instagram.com/lean_coders",
+      "isRelative": false
+    }
+  ]
+}

@@ -19,17 +19,25 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - widget: select
-        label: "tags"
-        name: "tags"
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Author, name: author, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Text, name: body, widget: markdown }
+      - label: Tags
+        name: tags
+        widget: create-select
+        url: ""
+        mode: plain
+        capture: ^\b$
         multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
+      - label: Testers
+        name: testers
+        widget: create-select
+        url: ""
+        mode: plain
+        capture: ^\b$
+        multiple: true
   - label: "Settings"
     name: "settings"
     editor:
@@ -37,7 +45,7 @@ collections:
     files:
       - label: "Navigation"
         name: "items"
-        file: "src/_data/navigation.yaml"
+        file: "src/_data/navigation.json"
         fields:
           - label: Nav Items
             name: items
@@ -47,9 +55,10 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
+              - { label: Relative link, name: isRelative, widget: boolean }
       - label: "Quick Links"
         name: "links"
-        file: "src/_data/quicklinks.yaml"
+        file: "src/_data/quicklinks.json"
         fields:
           - label: Nav Items
             name: links
@@ -61,8 +70,7 @@ collections:
               - { label: Description, name: desc, widget: string }
       - label: "Meta Settings"
         name: "settings"
-        file: "src/_data/settings.yaml"
+        file: "src/_data/settings.json"
         fields:
-          - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }

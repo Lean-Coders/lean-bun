@@ -5,7 +5,10 @@ module.exports = {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: {
+        primary: "#a50d73",
+        secondary: "#201c21",
+      },
     },
   },
   variants: {},
