@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "text": "Contact",
+      "text": "Kontakt",
       "url": "mailto:hello@lean-coders.at",
       "isRelative": true
     },
     {
-      "text": "Website",
+      "text": "LeanCoders",
       "url": "https://lean-coders.at",
       "isRelative": false
     },
