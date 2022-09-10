@@ -1,7 +1,7 @@
-<div class="container max-w-3xl px-6 pt-3 lg:pt-6">
+<div class="container max-w-4xl px-6 pt-3 lg:pt-6">
   <div class="container mx-auto">
     <nav
-      class="flex flex-col items-center flex-wrap py-6 max-w-2xl mx-auto gap-4"
+      class="flex flex-col items-center flex-wrap py-6 max-w-4xl mx-auto gap-6"
     >
       <!--Title-->
         <a
@@ -11,19 +11,24 @@
         >
 
       <!--Menu-->
-      <div class="flex-grow flex items-center w-auto text-center shadow-3xl">
+      <div class="flex-grow flex items-center w-auto text-center">
         {% if navigation.items %}
 
-        <ul class="pt-0 list-reset flex justify-end flex-1 items-center">
+        <ul class="pt-0 list-reset flex justify-end flex-1 items-center gap-2 sm:gap-4">
           {% for item in navigation.items %}
-          <li class="nav__item mr-3">
-            <a
-              class="text-lg font-bold inline-block text-secondary transition-colors no-underline hover:text-primary py-2 px-4"
-              target="{{ "_self" if item.isRelative else "_blank" }}"
-              href="{{ item.url }}"
-              >{{ item.text }}</a
-            >
-          </li>
+            <li class="nav__item">
+              <a
+                class="text-lg font-bold inline-block text-secondary transition-colors no-underline hover:text-primary"
+                target="{{ "_self" if item.isRelative else "_blank" }}"
+                href="{{ item.url }}"
+                >{{ item.text }}</a
+              >
+            </li>
+            {% if not loop.last %}
+              <li>
+                <div class="h-0.5 bg-primary w-3 mx-2 sm:mx-0 sm:w-6"></div>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
 

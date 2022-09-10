@@ -25,6 +25,9 @@ collections:
       - label: Description
         name: description
         widget: string
+      - label: Address
+        name: address
+        widget: string
       - label: Author
         name: author
         widget: string
@@ -38,6 +41,7 @@ collections:
         min: 0
         default: 0
         max: 5
+        step: 0.5
       - label: Testers
         name: testers
         widget: list
@@ -54,6 +58,7 @@ collections:
             min: 0
             default: 0
             max: 5
+            step: 0.5
           - label: Review
             name: review
             widget: object
@@ -69,6 +74,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Patty
                 name: pattyScore
                 widget: number
@@ -76,6 +82,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Timing
                 name: timingScore
                 widget: number
@@ -83,6 +90,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Drinks
                 name: drinksScore
                 widget: number
@@ -90,6 +98,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Ingredients
                 name: ingredientScore
                 widget: number
@@ -97,6 +106,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Value for Money
                 name: valueForMoneyScore
                 widget: number
@@ -104,6 +114,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Service
                 name: serviceScore
                 widget: number
@@ -111,6 +122,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
               - label: Ambiente
                 name: ambiente
                 widget: number
@@ -118,6 +130,7 @@ collections:
                 min: 0
                 default: 0
                 max: 5
+                step: 0.5
       - label: Text
         name: body
         widget: markdown

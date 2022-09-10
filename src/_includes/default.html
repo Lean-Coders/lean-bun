@@ -21,12 +21,10 @@ pageTitle: Lean Bun - Burger Testing
     />
     {% endif %}
   </head>
-  <body class="bg-gray-100">
-    {% include "./partials/navbar.html" %}
+  <body class="bg-gray-50">
+    <div class="shadow pb-4">{% include "./partials/navbar.html" %}</div>
 
-    <hr />
-
-    <div class="container max-w-3xl mt-6 px-6">{{ content | safe }}</div>
+    <div class="container max-w-4xl mt-8 px-6">{{ content | safe }}</div>
 
     {% include "./partials/footer.html" %}
 

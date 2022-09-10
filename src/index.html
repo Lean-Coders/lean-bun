@@ -3,35 +3,44 @@ layout: default
 path: home
 ---
 
-<div class="container mx-auto flex flex-col justify-center items-center">
-  <section class="mt-15 max-w-2xl mx-auto">
-    {% set postslist = collections.post %} {% for post in postslist | reverse %}
-    <article class="my-8">
-      <h2 class="font-bold text-3xl text-gray-900 mb-2">
-        <a href="{{ post.url | url }}">
-          {% if post.data.title %} {{ post.data.title }} {% else %} Untitled {%
-          endif %}
-        </a>
+<div
+  class="mx-auto mt-15 max-w-4xl flex flex-col gap-8 justify-center items-center"
+>
+  {% set postslist = collections.post %} {% for post in postslist | reverse %}
+  <article class="p-6 md:p-8 shadow-md rounded-md bg-white">
+    <a href="{{ post.url | url }}">
+      <h2 class="font-bold text-3xl text-secondary mb-3">
+        {{ post.data.title }}
       </h2>
+
+      <div
+        class="mb-1 sm:mb-3 flex flex-col sm:flex-row sm:justify-between gap-3"
+      >
+        <div
+          class="h-[28px] w-[140px] rating relative text-primary {{ 'before:bg-cover' if (5 - post.data.score) < 1 }}"
+          style="--rating:{{ 5 - post.data.score }}; --size: 28px"
+        ></div>
+        <p class="text-base leading-6 text-gray-500">
+          <time>{{ post.date | readableDate }}</time>
+          <span>&nbsp;by&nbsp;{{ post.data.author }}</span>
+        </p>
+      </div>
       <p class="text-base leading-6 text-gray-500 mb-3">
-        <time>
-          {{ post.date | readableDate }} by
-          <a>{{ post.data.author }}</a>
-        </time>
+        {{ post.data.address }}
       </p>
+
       {% if post.data.description %}
-      <p class="text-lg text-gray-500 mb-3">{{ post.data.description }}</p>
+      <p class="text-base font-bold text-gray-500 mb-3">
+        {{ post.data.description }}
+      </p>
       {% endif %}
 
       <p>
-        <a
-          href="{{ post.url | url }}"
-          class="text-indigo-500 font-bold text-lg"
-        >
+        <a href="{{ post.url | url }}" class="text-primary font-bold text-lg">
           Read more →
         </a>
       </p>
-    </article>
-    {% endfor %}
-  </section>
+    </a>
+  </article>
+  {% endfor %}
 </div>
