@@ -4,6 +4,7 @@ description: Ducimus provident labore alias. Hic dolorum officiis et. Amet nulla
   corporis amet omnis quas est et. Tempora incidunt sed asperiores aperiam
   voluptatem tempora. Ad amet recusandae ea ex doloremque officia ducimus alias.
   Ab architecto corporis qui laboriosam sequi enim.
+address: Siebensterngasse 31/III, 1070 Wien
 author: Julian Pufler
 date: 2022-09-08T16:00:48.942Z
 score: 3.5
