@@ -132,7 +132,7 @@ collections:
                 max: 5
                 step: 0.5
               - label: Ambiente
-                name: ambiente
+                name: ambienteScore
                 widget: number
                 value_type: float
                 min: 0

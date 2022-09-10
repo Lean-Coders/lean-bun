@@ -16,7 +16,7 @@ testers:
       pattyScore: 2
       valueForMoneyScore: 2
       varietyScore: 0
-      ambiente: 2
+      ambienteScore: 2
       burger: El Chicano
       drinksScore: 1
       bunScore: 2.5

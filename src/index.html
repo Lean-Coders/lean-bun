@@ -17,8 +17,8 @@ path: home
         class="mb-1 sm:mb-3 flex flex-col sm:flex-row sm:justify-between gap-3"
       >
         <div
-          class="h-[28px] w-[140px] rating relative text-primary {{ 'before:bg-cover' if (5 - post.data.score) < 1 }}"
-          style="--rating:{{ 5 - post.data.score }}; --size: 28px"
+          class="h-[28px] w-[140px] rating relative text-primary"
+          style="--rating:{{ 6 - post.data.score }}; --size: 28px"
         ></div>
         <p class="text-base leading-6 text-gray-500">
           <time>{{ post.date | readableDate }}</time>
