@@ -11,22 +11,22 @@ testers:
   - name: Julian
     review:
       ingredientScore: 2
+      ambienteScore: 2
       timingScore: 2
       pattyScore: 2
       valueForMoneyScore: 2
       varietyScore: 2
-      ambienteScore: 2
       burger: El Chicano
       drinksScore: 1
       bunScore: 2.5
       serviceScore: 1.5
   - review:
       ingredientScore: 1
+      ambienteScore: 2
       timingScore: 3
       pattyScore: 2
       valueForMoneyScore: 3
       varietyScore: 2
-      ambienteScore: 2
       burger: Der Burger
       drinksScore: 2
       bunScore: 2
@@ -35,6 +35,8 @@ testers:
 tags:
   - 7. Bezirk
 ---
+![test](/static/uploads/package_placeholder.png "test")
+
 Distinctio quis consequatur nihil. Nihil dolorem blanditiis voluptas in id. Perspiciatis iure expedita cum qui accusantium nisi ipsum dolorem.
 
 Rerum omnis consequatur itaque dolore sit. Quis voluptatibus maxime quo quae quia optio unde pariatur. Est nam minus quo amet. Et ex est voluptates. Aut et tempora recusandae saepe laborum in qui ut. Optio tempore aut omnis repellendus aliquid dolor voluptatem.
