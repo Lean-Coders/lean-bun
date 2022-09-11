@@ -20,11 +20,12 @@ prism: true
   <ul class="grid mx-auto prose lg:prose-xl">
     {% for tester in testers %} {% set score = tester | testerScore %}
     <li
+      class="py-2 sm:py-4 !px-2 sm:!px-4 not-prose bg-white rounded-md shadow-md"
       x-data="{ isOpen: false }"
       @keydown.escape="isOpen = false"
       @click="isOpen = !isOpen"
     >
-      <div class="grid grid-cols-[1fr,120px,32px] gap-2 not-prose">
+      <div class="grid grid-cols-[1fr,120px,32px] gap-2 items-center">
         <p class="font-bold text-base sm:text-lg">{{ tester.name }}</p>
         <div class="flex justify-end">
           <div
@@ -32,81 +33,137 @@ prism: true
             style="--rating:{{ 6 - score }}; --size: 24px"
           ></div>
         </div>
-        <p
-          class="font-bold text-center text-base sm:text-lg"
-          x-text="isOpen ? '-':'+'"
-        ></p>
+        <div class="transition-transform" :class="{ 'rotate-180': isOpen }">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m17 10-5 5-5-5"
+            />
+          </svg>
+        </div>
         {% set review = tester.review %}
-        <p class="text-sm leading-6 pt-4" :class="{ 'hidden': !isOpen }">
+        <p
+          class="text-sm sm:text-base !leading-8 pt-4"
+          :class="{ 'hidden': !isOpen }"
+        >
           Burger
         </p>
         <p
-          class="col-span-2 pt-4 text-right text-sm"
+          class="col-span-2 pt-4 text-right text-sm sm:text-base !leading-8"
           :class="{ 'hidden': !isOpen }"
         >
           {{ review.burger }}
         </p>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Bun</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Bun
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.bunScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Patty</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Patty
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.pattyScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Timing</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Timing
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.timingScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Drinks</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Drinks
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.drinksScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Variety</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Variety
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.varietyScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Ingredients</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Ingredients
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.ingredientScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Value for Money</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Value for Money
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.valueForMoneyScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm" :class="{ 'hidden': !isOpen }">Service</p>
+        <p
+          class="text-sm sm:text-base !leading-8"
+          :class="{ 'hidden': !isOpen }"
+        >
+          Service
+        </p>
         <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.serviceScore }}; --size: 24px"
           ></div>
         </div>
-        <p class="text-sm pb-4" :class="{ 'hidden': !isOpen }">Ambiente</p>
-        <div
-          class="flex justify-end col-span-2 pb-4"
+        <p
+          class="text-sm sm:text-base !leading-8"
           :class="{ 'hidden': !isOpen }"
         >
+          Ambiente
+        </p>
+        <div class="flex justify-end col-span-2" :class="{ 'hidden': !isOpen }">
           <div
             class="h-[24px] w-[120px] rating relative text-primary"
             style="--rating:{{ 6 - review.ambienteScore }}; --size: 24px"

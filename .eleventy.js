@@ -76,13 +76,13 @@ module.exports = function (eleventyConfig) {
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
 
-  // Copy favicon to route of /_site
-  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  // Copy Uploads Folder to /_site
+  eleventyConfig.addPassthroughCopy("./src/static/uploads");
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (outputPath.endsWith(".html")) {
+    if (outputPath.endsWith(".njk")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,

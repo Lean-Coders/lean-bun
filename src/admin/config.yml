@@ -2,15 +2,14 @@ backend:
   # Use netlify identity as backend
   name: git-gateway
   branch: master
-  ### enable below lines for github floategration ###
-name: github
-repo: surjithctly/neat-starter
-media_folder: "src/static/img"
-public_folder: "/static/img"
 
-# Please run "npx netlify-cms-proxy-server" for local backend
-local_backend: true
+media_folder: src/static/uploads
+public_folder: /static/uploads
+logo_url: /static/img/logo.png
+
 # publish_mode: editorial_workflow
+search: false
+
 collections:
   - label: Blog
     name: blog
@@ -34,14 +33,6 @@ collections:
       - label: Date
         name: date
         widget: datetime
-      - label: Score
-        name: score
-        widget: number
-        value_type: float
-        min: 0
-        default: 0
-        max: 5
-        step: 0.5
       - label: Testers
         name: testers
         widget: list
@@ -51,14 +42,6 @@ collections:
           - label: Name
             name: name
             widget: string
-          - label: Score
-            name: score
-            widget: number
-            value_type: float
-            min: 0
-            default: 0
-            max: 5
-            step: 0.5
           - label: Review
             name: review
             widget: object

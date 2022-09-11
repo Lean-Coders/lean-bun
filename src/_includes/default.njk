@@ -7,6 +7,7 @@ pageTitle: Lean Bun - Burger Testing
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="icon" href="/static/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{pageTitle}}</title>
     {% if description %}
@@ -22,11 +23,11 @@ pageTitle: Lean Bun - Burger Testing
     {% endif %}
   </head>
   <body class="bg-gray-50">
-    <div class="shadow pb-4">{% include "./partials/navbar.html" %}</div>
+    <div class="shadow pb-4">{% include "./partials/navbar.njk" %}</div>
 
     <div class="container max-w-4xl mt-8 px-6">{{ content | safe }}</div>
 
-    {% include "./partials/footer.html" %}
+    {% include "./partials/footer.njk" %}
 
     <script src="/static/js/alpine.js"></script>
 
