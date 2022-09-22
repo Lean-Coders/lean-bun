@@ -1,0 +1,14 @@
+{
+  "ingredientScore": 1,
+  "ambienteScore": 4,
+  "timingScore": 3,
+  "pattyScore": 2,
+  "valueForMoneyScore": 2,
+  "varietyScore": 5,
+  "name": "Julian",
+  "burger": "Tester",
+  "drinksScore": 4,
+  "bunScore": 1,
+  "serviceScore": 3,
+  "restaurant": "Smashbox"
+}
