@@ -1,6 +1,8 @@
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const { readFileSync } = require("fs");
+const { join } = require("path");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -16,11 +18,33 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  eleventyConfig.addFilter("loadTesterJson", (tester) => {
+    return JSON.parse(
+      readFileSync(join(__dirname, "src/_reviews", tester + ".json"), "utf-8")
+    );
+  });
+
+  eleventyConfig.addFilter("loadTestersJson", (testers) => {
+    const testersJson = [];
+    for (const tester of testers ?? []) {
+      testersJson.push(
+        JSON.parse(
+          readFileSync(
+            join(__dirname, "src/_reviews", tester + ".json"),
+            "utf-8"
+          )
+        )
+      );
+    }
+    return testersJson;
+  });
+
   eleventyConfig.addFilter("totalScore", (testers) => {
+    if (testers.length === 0) return 6;
     return (
       Math.round(
         (testers.reduce(
-          (sum, { review }) =>
+          (sum, review) =>
             sum +
             [
               review.bunScore,
@@ -42,7 +66,7 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-  eleventyConfig.addFilter("testerScore", ({ review }) => {
+  eleventyConfig.addFilter("testerScore", (review) => {
     return (
       Math.round(
         ([

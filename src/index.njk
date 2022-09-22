@@ -7,7 +7,7 @@ path: home
   class="mx-auto mt-15 max-w-4xl flex flex-col gap-8 justify-center items-center"
 >
   {% set postslist = collections.post %} {% for post in postslist | reverse %}
-  {% set score = 3 %}
+  {% set score = post.data.testers | loadTestersJson | totalScore %}
   <article class="p-6 md:p-8 shadow-md rounded-md bg-white">
     <a href="{{ post.url | url }}">
       <h2 class="font-bold text-center sm:text-left text-3xl text-secondary mb-4">

@@ -130,7 +130,7 @@ collections:
         widget: relation
         collection: review
         search_fields: ["name", "restaurant"]
-        value_field: "{{name}}__{{burger}}__{{bunScore}}__{{pattyScore}}__{{timingScore}}__{{drinksScore}}__{{varietyScore}}__{{ingredientScore}}__{{valueForMoneyScore}}__{{serviceScore}}__{{ambienteScore}}"
+        value_field: "{{slug}}"
         display_fields: ["name", "restaurant"]
         multiple: true
       - label: Text
