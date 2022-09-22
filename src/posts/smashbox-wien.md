@@ -8,18 +8,8 @@ address: Margaretenstraße 11, 1040 Wien
 author: Julian Pufler
 date: 2022-09-14T14:30:16.276Z
 testers:
-  - name: Julian
-    review:
-      ingredientScore: 2
-      ambienteScore: 2
-      timingScore: 2
-      pattyScore: 2
-      valueForMoneyScore: 2
-      varietyScore: 3.5
-      burger: El Chicano
-      drinksScore: 1
-      bunScore: 2.5
-      serviceScore: 1.5
+  - Elias
+  - Julian
 tags:
   - 8. Bezirk
 ---
