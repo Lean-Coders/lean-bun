@@ -3,7 +3,7 @@ layout: default
 prism: true
 ---
 
-{% set score = testers | totalScore %}
+{% set score = 2 %}
 <div class="py-8">
   <h1 class="font-bold tracking-wide text-3xl md:text-4xl">{{title}}</h1>
   <div
@@ -18,7 +18,7 @@ prism: true
     {{ address }}
   </p>
   <ul class="grid mx-auto prose lg:prose-xl">
-    {% for tester in testers %} {% set score = tester | testerScore %}
+    {% for tester in testers %} {% set score = 1 %}
     <li
       class="py-2 sm:py-4 !px-2 sm:!px-4 not-prose bg-white rounded-md shadow-md"
       x-data="{ isOpen: false }"
@@ -48,7 +48,8 @@ prism: true
             />
           </svg>
         </div>
-        {% set review = tester.review %}
+        {% import './../reviews/'+tester+'.md' as review %}
+        {{ review | dump }}
         <p
           class="text-sm sm:text-base !leading-8 pt-4"
           :class="{ 'hidden': !isOpen }"
