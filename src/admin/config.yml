@@ -11,6 +11,96 @@ logo_url: /static/img/logo.png
 search: false
 
 collections:
+  - label: Review
+    name: review
+    folder: src/review
+    create: true
+    editor:
+      preview: false
+    identifier_field: name
+    slug: "{{slug}}-{{restaurant}}"
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Restaurant
+        name: restaurant
+        widget: string
+      - label: Burger
+        name: burger
+        widget: string
+      - label: Bun
+        name: bunScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Patty
+        name: pattyScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Timing
+        name: timingScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Drinks
+        name: drinksScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Variety
+        name: varietyScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Ingredients
+        name: ingredientScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Value for Money
+        name: valueForMoneyScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Service
+        name: serviceScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
+      - label: Ambiente
+        name: ambienteScore
+        widget: number
+        value_type: float
+        min: 0
+        default: 0
+        max: 5
+        step: 0.5
   - label: Blog
     name: blog
     folder: src/posts
@@ -35,93 +125,12 @@ collections:
         widget: datetime
       - label: Testers
         name: testers
-        widget: list
-        collapsed: true
-        summary: "{{fields.name}} - {{fields.score}}"
-        fields:
-          - label: Name
-            name: name
-            widget: string
-          - label: Review
-            name: review
-            widget: object
-            collapsed: true
-            fields:
-              - label: Burger
-                name: burger
-                widget: string
-              - label: Bun
-                name: bunScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Patty
-                name: pattyScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Timing
-                name: timingScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Drinks
-                name: drinksScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Variety
-                name: varietyScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Ingredients
-                name: ingredientScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Value for Money
-                name: valueForMoneyScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Service
-                name: serviceScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
-              - label: Ambiente
-                name: ambienteScore
-                widget: number
-                value_type: float
-                min: 0
-                default: 0
-                max: 5
-                step: 0.5
+        widget: relation
+        collection: review
+        search_fields: ["name", "restaurant"]
+        value_field: "*"
+        display_fields: ["name", "restaurant"]
+        multiple: true
       - label: Text
         name: body
         widget: markdown
