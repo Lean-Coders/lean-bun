@@ -48,7 +48,7 @@ prism: true
             />
           </svg>
         </div>
-        {% import './../reviews/'+tester+'.md' as review %}
+        {%set review %}{% include './../_reviews/'+tester+'.md' %}{%endset%}
         {{ review | dump }}
         <p
           class="text-sm sm:text-base !leading-8 pt-4"

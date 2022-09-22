@@ -13,8 +13,10 @@ search: false
 collections:
   - label: Review
     name: review
-    folder: src/reviews
+    folder: src/_reviews
     create: true
+    extension: json
+    format: json
     editor:
       preview: false
     identifier_field: name
