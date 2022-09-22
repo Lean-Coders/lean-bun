@@ -8,8 +8,8 @@ address: Margaretenstraße 11, 1040 Wien
 author: Julian Pufler
 date: 2022-09-14T14:30:16.276Z
 testers:
-  - Julian__Tester__1__1__2__3__2.5__3__1.5____2
-  - Elias__Tester2__1.5__2__1__3.5__2.5__3.5__2____2
+  - Julian__Tester__1__1__2__3__2.5__3__1.5__3__2
+  - Elias__Tester2__1.5__2__1__3.5__2.5__3.5__2__3__2
 tags:
   - 8. Bezirk
 ---
