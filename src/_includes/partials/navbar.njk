@@ -6,14 +6,14 @@
       <!--Title-->
         <a
           href="/"
-          class="bg-clip-text text-center max-w-sm sm:max-w-none leading-tight text-transparent bg-gradient-to-r from-primary to-secondary font-bold text-5xl"
+          class="bg-clip-text font-['MontserratBold'] text-center max-w-sm sm:max-w-none leading-tight text-transparent bg-gradient-to-r from-primary to-secondary font-bold text-5xl"
           >{{pageTitle}}</a
         >
 
       <!--Menu-->
       {% if navigation.items %}
         <div class="flex-grow flex items-center w-auto text-center">
-          <ul class="pt-0 list-reset flex justify-end flex-1 items-center gap-2 sm:gap-4">
+          <ul class="pt-0 list-reset flex justify-end flex-1 items-baseline gap-2 sm:gap-4">
             {% for item in navigation.items %}
               <li class="nav__item">
                 <a
@@ -24,7 +24,7 @@
                 >
               </li>
               {% if not loop.last %}
-                <li>
+                <li class="pb-1">
                   <div class="h-0.5 bg-primary w-3 mx-2 sm:mx-0 sm:w-6"></div>
                 </li>
               {% endif %}

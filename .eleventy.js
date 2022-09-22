@@ -79,6 +79,9 @@ module.exports = function (eleventyConfig) {
   // Copy Uploads Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/uploads");
 
+  // Copy Fonts Folder to /_site
+  eleventyConfig.addPassthroughCopy("./src/static/fonts");
+
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
