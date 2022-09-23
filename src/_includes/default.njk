@@ -10,9 +10,16 @@ pageTitle: Lean Bun - Burger Testing
     <link rel="icon" href="/static/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{pageTitle}}</title>
-    {% if description %}
-    <meta name="description" content="{{description}}" />
-    {% endif %} {% block head %}{% endblock %}
+
+    <meta name="title" content="Lean Bun - Burger Testing">
+    <meta name="description" content="LeanBun is an initiative to find the best burger joint in Vienna. ">
+    <meta name="keywords" content="burger-testing, burger, lean-coders, blog">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="revisit-after" content="14 days">
+    <meta name="author" content="LEAN-CODERS GmbH">
+
+    {% block head %}{% endblock %}
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     {% if prism == true %}
     <link
