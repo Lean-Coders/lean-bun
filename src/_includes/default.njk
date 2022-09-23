@@ -37,15 +37,15 @@ pageTitle: Lean Bun - Burger Testing
 
     {% include "./partials/footer.njk" %}
 
-    <script src="/static/js/alpine.js"></script>
+    <script src="/static/js/alpine.js" async></script>
 
-    {% if path == "home" %}
+    {# {% if path == "home" %}
     <!-- Netlify Identity Widget -->
     <!-- Needed only if you are using Netlify Identity feature -->
     <script
       type="text/javascript"
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
-    {% endif %}
+    {% endif %} #}
   </body>
 </html>
