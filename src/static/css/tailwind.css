@@ -2,49 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat/montserrat-variable-subset.woff2")
-      format("woff2 supports variations"),
-    url("../fonts/montserrat/montserrat-variable-subset.woff2")
-      format("woff2-variations"),
-    url("../fonts/montserrat/montserrat-variable-subset.woff2") format("woff2"),
-    url("../fonts/montserrat/montserrat-variable-subset.zopfli.woff")
-      format("woff"),
-    url("../fonts/montserrat/montserrat-variable-subset.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "MontserratBold";
-  src: url("../fonts/montserrat/montserrat-variable-subset.woff2")
-      format("woff2 supports variations"),
-    url("../fonts/montserrat/montserrat-variable-subset.woff2")
-      format("woff2-variations"),
-    url("../fonts/montserrat/montserrat-variable-subset.woff2") format("woff2"),
-    url("../fonts/montserrat/montserrat-variable-subset.zopfli.woff")
-      format("woff"),
-    url("../fonts/montserrat/montserrat-variable-subset.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Varta";
-  src: url("../fonts/varta/varta-variable-subset.woff2")
-      format("woff2 supports variations"),
-    url("../fonts/varta/varta-variable-subset.woff2") format("woff2-variations"),
-    url("../fonts/varta/varta-variable-subset.woff2") format("woff2"),
-    url("../fonts/varta/varta-variable-subset.zopfli.woff") format("woff"),
-    url("../fonts/varta/varta-variable-subset.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
   --font-stack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
