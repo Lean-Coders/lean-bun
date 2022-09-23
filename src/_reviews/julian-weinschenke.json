@@ -1,0 +1,14 @@
+{
+  "ingredientScore": 1,
+  "ambienteScore": 1,
+  "timingScore": 3,
+  "pattyScore": 5,
+  "valueForMoneyScore": 5,
+  "varietyScore": 5,
+  "name": "Julian",
+  "burger": "Tester",
+  "drinksScore": 5,
+  "bunScore": 5,
+  "serviceScore": 5,
+  "restaurant": "Weinschenke"
+}
