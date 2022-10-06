@@ -1,5 +1,6 @@
 ---
 pageTitle: Lean Bun - Burger Testing
+title: Lean Bun - Burger Testing
 ---
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ pageTitle: Lean Bun - Burger Testing
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link rel="icon" href="/static/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{pageTitle}}</title>
+    <title>{{title}}</title>
 
     <meta name="title" content="Lean Bun - Burger Testing">
     <meta name="description" content="LeanBun is an initiative to find the best burger joint in Vienna. ">
@@ -30,10 +31,10 @@ pageTitle: Lean Bun - Burger Testing
     />
     {% endif %}
   </head>
-  <body class="bg-gray-50">
+  <body class="bg-gray-50 min-h-screen flex flex-col">
     <div class="shadow pb-4">{% include "./partials/navbar.njk" %}</div>
 
-    <div class="container max-w-4xl mt-8 px-6">{{ content | safe }}</div>
+    <div class="container max-w-4xl mt-8 px-6 flex-grow flex flex-col">{{ content | safe }}</div>
 
     {% include "./partials/footer.njk" %}
 
