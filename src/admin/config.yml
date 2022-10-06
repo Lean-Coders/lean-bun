@@ -5,7 +5,6 @@ backend:
 
 media_folder: src/static/uploads
 public_folder: /static/uploads
-logo_url: /static/img/logo.png
 
 # publish_mode: editorial_workflow
 search: false

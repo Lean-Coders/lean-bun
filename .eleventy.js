@@ -11,7 +11,8 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   eleventyConfig.setDataDeepMerge(true);
 
-  // human readable date
+  //#region Filters
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy"
@@ -39,6 +40,11 @@ module.exports = function (eleventyConfig) {
     return testersJson;
   });
 
+  const getReviewValueArray = (review) => {
+    const { name, restaurant, burger, ...scores } = review;
+    return Object.values(scores).filter((val) => val > 0);
+  };
+
   eleventyConfig.addFilter("totalScore", (testers) => {
     if (testers.length === 0) return 6;
     return (
@@ -46,18 +52,8 @@ module.exports = function (eleventyConfig) {
         (testers.reduce(
           (sum, review) =>
             sum +
-            [
-              review.bunScore,
-              review.pattyScore,
-              review.timingScore,
-              review.drinksScore,
-              review.varietyScore,
-              review.ingredientScore,
-              review.valueForMoneyScore,
-              review.serviceScore,
-              review.ambienteScore,
-            ].reduce((acc, curr) => acc + curr, 0) /
-              9,
+            getReviewValueArray(review).reduce((acc, curr) => acc + curr, 0) /
+              getReviewValueArray(review).length,
           0
         ) /
           testers.length) *
@@ -84,6 +80,23 @@ module.exports = function (eleventyConfig) {
           2
       ) / 2
     );
+  });
+
+  //#endregion
+
+  //#region Shortcodes
+
+  eleventyConfig.addNunjucksShortcode("rating", function (score, size) {
+    return `<span
+            class="h-[${size}px] w-[${size * 5}px] rating relative text-primary"
+            style="--rating:${(6 - score) % 6}; --size: ${size}px"
+          ></span>`;
+  });
+
+  //#endregion
+
+  eleventyConfig.addCollection("postReverse", function (collectionApi) {
+    return collectionApi.getFilteredByTag("post").reverse();
   });
 
   // Syntax Highlighting for Code blocks
