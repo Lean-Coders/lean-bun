@@ -1,6 +1,6 @@
-<footer class="text-center w-full py-8 border-t-2 border-[#eee]">
+<footer class="text-center w-full py-8 border-t-2 border-[#eee]" x-data x-cloak>
   <small class="text-gray-500"
     >Copyright ©
-    <a href="{{settings.url}}">{{settings.copyright}}</a> 2022.</small
+    <a href="{{settings.url}}">{{settings.copyright}}</a> <span x-text="new Date().getFullYear()"></span>.</small
   >
 </footer>
