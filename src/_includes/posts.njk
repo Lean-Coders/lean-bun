@@ -19,7 +19,7 @@ prism: true
     {% for tester in testers %} 
       {% set review = tester | loadTesterJson %}
       <li
-        class="py-2 sm:py-4 !px-2 sm:!px-4 not-prose bg-white rounded-md shadow-md"
+        class="py-2 sm:py-4 !px-2 sm:!px-4 not-prose bg-white rounded-md shadow-md cursor-pointer"
         x-data="{ isOpen: false }"
         @keydown.escape="isOpen = false"
         @click="isOpen = !isOpen"

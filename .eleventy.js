@@ -95,10 +95,6 @@ module.exports = function (eleventyConfig) {
 
   //#endregion
 
-  eleventyConfig.addCollection("postReverse", function (collectionApi) {
-    return collectionApi.getFilteredByTag("post").reverse();
-  });
-
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 

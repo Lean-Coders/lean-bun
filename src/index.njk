@@ -2,8 +2,9 @@
 layout: default
 path: home
 pagination: 
-  data: collections.postReverse
+  data: collections.post
   size: 4
+  reverse: true
 permalink: "{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}{% endif %}/index.html"
 ---
 
@@ -44,7 +45,7 @@ permalink: "{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}{% endi
       </article>
     </a>
   {% endfor %}
-  {% if pagination.href.previous or pagination.href.next %}
+  {# {% if pagination.href.previous or pagination.href.next %}
     <div class="grid grid-cols-2 w-full px-1.5">
       {% if pagination.href.previous %}
         <a href="{{ pagination.href.previous | url }}" class="text-primary font-bold text-lg col-start-1 text-start">
@@ -57,5 +58,26 @@ permalink: "{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}{% endi
         </a>
       {% endif %}
     </div>
+  {% endif %} #}
+  {% if pagination.href.previous or pagination.href.next %}
+    <ul class="flex mx-auto items-center flex-wrap gap-2 font-[Varta]">
+      <li>
+        <a aria-label="previous page" href="{{ pagination.href.previous | url }}" class="inline-flex items-center justify-center bg-white text-secondary hover:bg-gray-200 border-gray-300 border no-underline w-8 h-8 md:w-10 md:h-10 rounded transition-colors px-1.5 pt-1 text-lg md:text-2xl leading-[1.43] {% if not pagination.href.previous %}opacity-40{% endif %}">
+          «
+        </a>
+      </li>
+      {% for href in pagination.hrefs %}
+        <li>
+          <a aria-label="page {{loop.index}}" href={{ href | url }} class="inline-flex items-center justify-center text-secondary hover:bg-gray-200 border-gray-300 border no-underline w-8 h-8 md:w-10 md:h-10 rounded transition-colors px-1.5 pt-1 md:pt-1.5 text-sm md:text-base leading-[1.43] {% if pagination.pageNumber + 1 === loop.index %}bg-gray-100{% else %}bg-white{% endif %}">
+            <span>{{ loop.index }}</span>
+          </a>        
+        </li>
+      {% endfor %}
+      <li>
+        <a aria-label="next page" href="{{ pagination.href.next | url }}" class="inline-flex items-center justify-center bg-white text-secondary hover:bg-gray-200 border-gray-300 border no-underline w-8 h-8 md:w-10 md:h-10 rounded transition-colors px-1.5 pt-1 text-lg md:text-2xl leading-[1.43] scale-x-[-1] {% if not pagination.href.next %}opacity-40{% endif %}">
+          «
+        </a>
+      </li>
+    </ul>
   {% endif %}
 </div>
